@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="06_portfolio.css" />
+
+     <!-- Archivo CSS externo -->
+  <link rel="stylesheet" href="04_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <img src="imagenescg/logocg.png" class="logo" alt="Logo">
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section id="inicio" class="hero">
+    <img src="imagenescg/Campo.png" alt="Fondo" class="hero-img">
+    
+    <div class="hero-content">
+        <h1>BIENVENIDOS A MI PORTFOLIO</h1>
+
+        <!-- BOTÓN ARREGLADO → lleva a #trabajos -->
+        <a href="#trabajos" class="cta-button">Descubre más</a>
+    </div>
+</section>
+
+<section id="sobre-mi" class="sobre-mi">
+    <div class="sobre-mi-img">
+        <img src="imagenescg/Pegatina.jpg" alt="Mi foto">
+    </div>
+    <div class="sobre-mi-texto">
+        <h1>Me presento!</h1>
+        <p>
+            Hola, soy Carmen González, nacida en Marbella en 2003. Desde pequeña me fascinan los dibujos animados, lo que despertó mi pasión por el dibujo. Durante seis años estudié pintura y dibujo, aprendiendo técnicas como óleo, acuarela y grafito, lo que me permitió disfrutar y comprender cada etapa del proceso creativo.
+
+Con el tiempo descubrí la animación, tanto en 2D como en 3D, y cómo puede combinar estética, emoción y narrativa de forma natural, convirtiéndose en una gran fuente de inspiración. Estudiar diseño gráfico me abrió las puertas al mundo digital, donde descubrí nuevas herramientas que complementan lo aprendido de manera tradicional. Esa combinación de técnicas analógicas y digitales es lo que trato de aplicar en cada proyecto.
+
+Actualmente sigo aprendiendo, explorando nuevas formas de mejorar y de expresar mis ideas a través de la ilustración y la imagen.
+        </p>
+    </div>
+</section>
+
+<section id="trabajos-destacados">
+    <h1>Trabajos Destacados</h1>
+
+    <div class="galeria-destacada">
+        <!-- Trabajo principal -->
+        <div class="principal trabajo">
+            <video src="videoscg/Brandingtv.mp4" autoplay muted loop controls></video>
+            <p>Proyecto Principal</p>
+        </div>
+
+        <!-- Subtrabajos -->
+        <div class="sub-container">
+            <div class="sub trabajo">
+                <img src="imagenescg/revistaglobos.jpg" alt="Subtrabajo 1">
+                <p>Subtrabajo 1</p>
+            </div>
+            <div class="sub trabajo">
+                <img src="imagenescg/soloencasa.jpg" alt="Subtrabajo 2">
+                <p>Subtrabajo 2</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="trabajos">
+    <h1>Trabajos</h1>
+
+    <!-- GALERÍA DESTACADA + resto de trabajos -->
+    <div class="galeria-compacta">
+
+        <!-- Trabajo 1 -->
+        <div class="trabajo">
+            <video src="videoscg/Brandingtv.mp4" autoplay muted loop controls></video>
+            <p>Branding TV Pekes</p>
+        </div>
+
+        <!-- Trabajo 2 -->
+        <div class="trabajo">
+            <img src="imagenescg/portadazapatos.jpg">
+            <p>Los zapatos rojos</p>
+        </div>
+
+        <!-- Trabajo 3 -->
+        <div class="trabajo">
+            <img src="imagenescg/soloencasa.jpg">
+            <p>Solo en casa</p>
+        </div>
+
+        <!-- Resto de trabajos -->
+        <div class="trabajo">
+            <video src="videoscg/Tufotodelcajon.mp4" autoplay muted loop controls></video>
+            <p>Tu foto del cajón</p>
+        </div>
+        <div class="trabajo">
+            <img src="imagenescg/bolsapatas.jpg">
+            <p>Bolsa de patatas</p>
+        </div>
+        <div class="trabajo">
+            <img src="imagenescg/portadaquimera.jpg">
+            <p>Revista Quimera</p>
+        </div>
+        <div class="trabajo">
+            <video src="videoscg/Typo.mp4" autoplay muted loop controls></video>
+            <p>Typos</p>
+        </div>
+        <div class="trabajo">
+            <img src="imagenescg/r.jpg">
+            <p>R</p>
+        </div>
+        <div class="trabajo">
+            <img src="imagenescg/Logovg.png">
+            <p>Viveros González</p>
+        </div>
+        <div class="trabajo">
+            <img src="imagenescg/rosarito.jpg">
+            <p>Rosarito fashion film</p>
+        </div>
+        <div class="trabajo">
+            <img src="imagenescg/winonacartel.jpg">
+            <p>Infografía</p>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="contacto" class="formulario">
+    <div class="formulario"> 
+        </div>
+  <h1>Contacta conmigo</h1>
+<p>Rellena este simpático formulario para contarme que te parece o si tienes algún tipo de pregunta.</p>
+  
+  <form action="https://formspree.io/f/xzznkknd" method="POST" class="contact-form">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ej: Carmen González" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="_replyto" placeholder="Ej: correo@ejemplo.com" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+
+</section>
+
+<footer>
+    <footer class="footer">
+  <div class="footer-container">
+    <!-- Columna 1: Contacto -->
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <p>📞 +34 722202244</p>
+      <p>📧 carmengonzgonzz@gmail.com</p>
+    </div>
+
+    <!-- Columna 2: Horario -->
+    <div class="footer-column">
+      <h4>Horario</h4>
+      <p>Lunes a Jueves: 11:30 a 15:00</p>
+      <p>Viernes: 11:30 a 14:00</p>
+    </div>
+
+    <!-- Columna 3: Redes Sociales -->
+    <div class="footer-column">
+      <h4>Sígueme</h4>
+      <div class="footer-redes">
+
+        <!-- 🌐 REDES SOCIALES -->
+<div class="footer-redes">
+  <div class="redes">
+    <a href="https://www.instagram.com/carmengnzz_art/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://es.linkedin.com/in/carmen-gonz%C3%A1lez-11a82533b" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</div>
+
+        </a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+</footer>
+
+<!-- Script para animaciones al hacer scroll -->
+<script>
+const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+    if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+    }
+  });
+},{ threshold: 0.1 });
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+<script>
+function resizeMasonryItems() {
+    const grid = document.querySelector('.galeria-compacta');
+    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('gap'));
+    const rowHeight = 10; // base mínima
+
+    grid.querySelectorAll('.trabajo').forEach(item => {
+        const contentHeight = item.querySelector('img, video').getBoundingClientRect().height;
+        const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
+        item.style.gridRowEnd = `span ${rowSpan}`;
+    });
+}
+
+// Ejecutar al cargar y al redimensionar ventana
+window.addEventListener('load', resizeMasonryItems);
+window.addEventListener('resize', resizeMasonryItems);
+</script>
+
+
+</body>
+</html>
 
