@@ -1,0 +1,473 @@
+/* ---- FUENTE PERSONALIZADA ---- */
+@font-face {
+    font-family: 'Coiny';
+    src: url('fonts/Coiny-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---- ESTILOS GENERALES ---- */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Coiny', sans-serif;
+    letter-spacing: 2px;;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+    box-shadow: 0 2px 5px rgba(255, 232, 236, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+nav a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #012a4a;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(180, 217, 213, 0.5);
+}
+
+/* ---- HERO ---- */
+.hero {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 8vh;
+    color: #c9184a;
+}
+
+/* ---- BOTÓN CTA ---- */
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffb3c1;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.0);
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    color: #ffb3c1;
+    background-color: #c9184a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 63, 136, 0.3);
+}
+
+#trabajos, #contacto {
+    scroll-margin-top: 120px;
+}
+
+/* ---- SECCIONES ---- */
+section {
+    padding: 50px 30px;
+    min-height: 100vh;
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-out, transform 2s ease-out; 
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#inicio {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* ---- SOBRE MÍ ---- */
+.sobre-mi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #ffffff;
+}
+
+.sobre-mi-img img {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.sobre-mi-texto {
+    max-width: 600px;
+    text-align: left;
+    color: #012a4a;
+}
+
+.sobre-mi-texto h1 {
+    margin-bottom: 20px;
+}
+
+.sobre-mi-texto p {
+    line-height: 1.6;
+}
+
+#trabajos-destacados {
+    padding: 50px 30px;
+    background: #ffffff;
+}
+
+#trabajos-destacados h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #012a4a;
+}
+
+/* Galería destacada */
+.galeria-destacada {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+}
+
+.galeria-destacada .principal {
+    width: 100%;
+    min-height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-destacada .principal:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.galeria-destacada .principal video,
+.galeria-destacada .principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-destacada .sub-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.galeria-destacada .sub {
+    min-height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-destacada .sub:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.galeria-destacada .sub img,
+.galeria-destacada .sub video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive: apilar subtrabajos en móvil */
+@media (max-width: 700px) {
+    .galeria-destacada .sub-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ---- TRABAJOS ---- */
+#trabajos h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #012a4a;
+}
+
+/* Centrar todos los h2 de la sección trabajos */
+#trabajos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #012a4a;
+}
+
+
+.categoria {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.categoria h2 {
+    margin-bottom: 20px;
+    color: #012a4a;
+    text-align: center;
+}
+
+.galeria {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.trabajo {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(180, 217, 213, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trabajo img {
+    width: 100%;
+    display: block;
+}
+
+.trabajo p {
+    padding: 10px;
+    color: #012a4a;
+}
+
+.trabajo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(180, 217, 213, 0.8);
+}
+
+/* ===== GALERÍA DESTACADA (1 grande + 2 pequeños) ===== */
+.galeria-destacada {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+
+    /* Principal arriba, subtrabajos debajo */
+    grid-template-columns: 1fr;
+}
+
+/* Trabajo principal grande */
+.galeria-destacada .principal {
+    width: 100%;
+    min-height: 450px; /* altura mínima mayor */
+}
+
+.galeria-destacada .principal video,
+.galeria-destacada .principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ocupa todo el contenedor */
+}
+
+/* Subtrabajos */
+.galeria-destacada .sub-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.galeria-destacada .sub {
+    min-height: 300px; /* mayor altura para que se vea más grande */
+}
+
+.galeria-destacada .sub img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive: en móvil se apilan */
+@media (max-width: 700px) {
+    .galeria-destacada .sub-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+/* ---- CONTACTO ---- */
+.formulario{
+    min-height: 5vh
+}
+#contacto {
+    text-align: center;
+    color: #012a4a;
+    background: #ffffff;
+    .contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 15px;
+  padding-top: 70px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #012a4a;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #c9184a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ffb3c1;
+  transform: translateY(-2px);
+}
+
+}
+
+/* Footer */
+.footer-container {
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* tres columnas iguales */
+    gap: 20px;
+    text-align: center;
+    align-items: start;
+    background-color: #ffe8ec;
+    color: #c9184a;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Redes sociales */
+.footer-redes a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #c9184a;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-redes a:hover {
+    color: #ffb3c1;      /* cambia de color */
+    transform: scale(1.2); /* un poquito más grande */
+}
+
+
+/* GALERÍA TIPO MASONRY GRANDOTA */
+.galeria-compacta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* tarjetas más grandes */
+    gap: 40px; /* más espacio entre tarjetas */
+    padding: 40px; /* margen interno para que respire */
+}
+
+/* TARJETAS MÁS GRANDES */
+.galeria-compacta .trabajo {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-compacta .trabajo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Imagen o video que ocupe todo el contenedor */
+.galeria-compacta .trabajo img,
+.galeria-compacta .trabajo video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Texto centrado y más grande */
+.galeria-compacta .trabajo p {
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* RESPONSIVE: móviles */
+@media (max-width: 700px) {
+    .galeria-compacta {
+        grid-template-columns: 1fr; /* ocupa todo el ancho en móvil */
+        gap: 30px;
+        padding: 20px;
+    }
+}
+
+
+
